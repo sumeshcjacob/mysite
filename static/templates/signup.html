@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+      
+      
+      {% block hero-unit%}
+          <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1> Transcendence (2014) </h1>
+        <p>As Dr. Will Caster works toward his goal of creating an omniscient, sentient machine, a radical anti-technology organization fights to prevent him from establishing a world where computers can transcend the abilities of the human brain.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
+     {% endblock %}
+     
+     
+     
+     
+  
+  
+  
+      
+        {% block content %}
+             <div class="span3">
+          <h2>Storyline</h2>
+          <p>Dr. Will Caster (Johnny Depp) is the foremost researcher in the field of Artificial Intelligence, working to create a sentient machine that combines the collective intelligence of everything ever known with the full range of human emotions.  </p>
+          <p><a class="btn" href="{% url 'about' %}">View details &raquo;</a></p>
+        </div>
+        <div class="span3">
+          <h2>Plot Summary</h2>
+          <p> His highly controversial experiments have made him famous, but they have also made him the prime target of anti-technology extremists who will do whatever extremity, even murder it takes to stop him.</p>
+          <p><a class="btn" href="{% url 'about' %}">View details &raquo;</a></p>
+       </div>
+        <div class="span3">
+          <h2>Synopsis</h2>
+          <p>But they atlast become the catalyst for him to succeed because  his wife Evelyn (Rebecca Hall) and best friend Max Waters (Paul Bettany), both fellow researchers, the question is not if they can...but if they should. </p>
+          <p><a class="btn" href="{% url 'about' %}">View details &raquo;</a></p>
+        </div>
+        <div class="span3">
+            <h1>Go Pro!</h1>
+            <p>Enjoy  premium membership.</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="SU9NHU3DMFX8U">
+                <input type="hidden" name="on0" value="Plans">
+                <select name="os0" class= "span3">
+                        <option value="Basic">Basic $99.00 USD</option>
+                        <option value="Basic +">Basic + $149.00 USD</option>
+                        <option value="Premium">Premium $199.00 USD</option>
+                </select> 
+                <input type="hidden" name="currency_code" value="USD" >
+                <button type = "submit" class= "btn btn-success btn-block" >Join Now</button>
+            </form>
+
+           
+
+            
+            
+            <h1>Join Now</h1>
+            <form method='POST'  action=''> {% csrf_token %}
+            {{forms.span3}}
+            {{forms.first_name}}
+            {{form.as_p}}
+            
+                
+                <input type = "submit" class= "btn btn-success btn-block">
+            </form>
+        
+        </div>
+            
+            
+        {% endblock%}
